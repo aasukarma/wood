@@ -1252,23 +1252,26 @@
   </div>
 
   <form class="contact-form reveal reveal-delay-2" action="https://formspree.io/f/xojkkpkp" method="POST">
+    <input type="hidden" name="_subject" value="New Enquiry - Motion Wood Website"/>
+    <input type="hidden" name="_replyto" value="avindia.1998@gmail.com"/>
+    <input type="hidden" name="_next" value="https://www.motionwoods.com/#contact"/>
     <div class="form-row">
       <div class="form-field">
         <label>Your Name</label>
-        <input type="text" placeholder="Full name"/>
+        <input type="text" name="name" placeholder="Full name" required/>
       </div>
       <div class="form-field">
         <label>Phone Number</label>
-        <input type="tel" placeholder="+91 XXXXX XXXXX"/>
+        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/>
       </div>
     </div>
     <div class="form-field">
       <label>Email Address</label>
-      <input type="email" placeholder="your@email.com"/>
+      <input type="email" name="email" placeholder="your@email.com" required/>
     </div>
     <div class="form-field">
       <label>Project Type</label>
-      <select>
+      <select name="project_type">
         <option value="">Select project type</option>
         <option>Residential – Apartment / Flat</option>
         <option>Residential – Bungalow / Villa</option>
@@ -1281,7 +1284,7 @@
     </div>
     <div class="form-field">
       <label>Tell us about your project</label>
-      <textarea placeholder="Describe your requirements — number of doors, furniture needed, timeline, location..."></textarea>
+      <textarea name="message" placeholder="Describe your requirements — number of doors, furniture needed, timeline, location..."></textarea>
     </div>
     <button class="form-submit" type="submit">Send Enquiry →</button>
   </form>
@@ -1302,7 +1305,4 @@
 
 
 <a href="https://wa.me/919860785024" target="_blank" style="position:fixed;bottom:2rem;right:2rem;z-index:1000;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">💬</a>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // No scroll reveal - all visible by default
-
-  // Nav scroll 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd7
