@@ -1304,7 +1304,7 @@
         <div class="contact-item-icon">✉️</div>
         <div class="contact-item-text">
           <label>Email</label>
-          <span>teammotionwoods@gmail.com</span>
+          <span id="contact-email"></span>
         </div>
       </div>
       <div class="contact-item">
@@ -1366,11 +1366,24 @@
   <div class="footer-social">
     <a href="https://instagram.com/motionwoods">Instagram</a>
     <a href="https://wa.me/919860785024">WhatsApp</a>
+    <a href="/wooden-door-manufacturer-pune">Wooden Doors</a>
+    <a href="/interior-furnishing-contractor-pune">Interiors</a>
+    <a href="/how-to-choose-wooden-doors-for-apartments">Blog</a>
   </div>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/919860785024" style="position:fixed;bottom:2rem;right:2rem;z-index:999;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.25);">💬</a>
+
+<script>
+var u = 'teammotionwoods';
+var d = 'gmail.com';
+var email = u + '@' + d;
+var footer = document.getElementById('footer-email');
+var contact = document.getElementById('contact-email');
+if(footer){ footer.href = 'mailto:' + email; footer.textContent = email; }
+if(contact){ contact.innerHTML = '<a href="mailto:' + email + '" style="color:rgba(242,237,230,0.7);text-decoration:none;">' + email + '</a>'; }
+</script>
 
 </body>
 </html>
