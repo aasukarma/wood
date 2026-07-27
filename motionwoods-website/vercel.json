@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/how-to-choose-wooden-doors-for-apartments",
+      "destination": "/blog/how-to-choose-wooden-doors-for-apartments",
+      "permanent": true
+    }
+  ]
+}
