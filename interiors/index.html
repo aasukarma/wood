@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion Woods Interiors — Full Home Interiors in Pune</title>
+<link rel="canonical" href="https://www.motionwoods.com/interiors">
+<meta name="description" content="Modular kitchens, wardrobes, doors and full-home interiors — designed, built in our own Pune factory and installed by our own crew. Book a free consultation.">
+
+<!--
+  ===================================================================
+  MOTION WOODS INTERIORS — B2C LANDING (DEMO / SKELETON)
+  Style reference: HomeLane / Livspace / NoBroker Interiors.
+  This is a STANDALONE demo page — does not touch the builder site.
+
+  WHAT IS REAL vs PLACEHOLDER
+  - REAL (safe to keep): own 12,000 sq ft factory at Nere near Punawale,
+    35+ yr founder craft legacy, 7,650+ doors in two townships,
+    dedicated install crew, factory-controlled quality.
+  - PLACEHOLDER (you must supply): every gallery image (marked
+    "Add project photo"), and any hard price number. No fake
+    "600 designers / 45-day guarantee" claims are used.
+
+  TO GO LIVE
+  1. Drop real finished-home photos into the .ph tiles (replace the
+     placeholder div with <img src="...">).
+  2. If you want a real cost estimator, give me your per-room rate
+     ranges and I'll wire the calculator.
+  3. Decide the URL (suggested: motionwoods.com/interiors).
+  ===================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1B1411; --ink2:#2A211C; --cream:#F4F1EA; --cream2:#ECE7DC;
+  --red:#9C2B2B; --gold:#C7A24A; --white:#FFFDF8; --line:#DDD5C6;
+  --serif:'Playfair Display',Georgia,serif; --sans:'Inter',Arial,Helvetica,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink2);background:var(--cream);line-height:1.7;font-size:16.5px}
+img{max-width:100%;display:block}
+a{color:var(--red);text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.15;font-weight:700}
+h1{font-size:clamp(2rem,4.6vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.kicker{display:inline-block;color:var(--red);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.76rem;margin-bottom:12px}
+.kicker::before{content:"— ";color:var(--gold)}
+.gold{color:var(--gold)}.accent{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 30px;border-radius:6px;font-weight:600;border:2px solid var(--red);cursor:pointer;font-size:1rem;font-family:var(--sans);transition:transform .2s,background .25s}
+.btn:hover{background:#7e2222}.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#b8912f}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font-family:var(--serif);font-weight:800;font-size:1.4rem;color:var(--ink)}
+.logo span{color:var(--red)}
+.logo small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.3em;color:var(--gold);font-weight:600;text-transform:uppercase}
+.nav .right{display:flex;align-items:center;gap:18px}
+.nav .tel{font-weight:600;color:var(--ink);font-size:.95rem;white-space:nowrap}
+@media(max-width:720px){.nav .tel{display:none}}
+
+/* hero */
+.hero{background:var(--ink);color:#EDE6DA;position:relative;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:70px 0 78px}
+.hero .est{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.76rem;margin-bottom:16px}
+.hero h1{color:var(--white)}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{color:#CDC3B4;margin:20px 0 26px;font-size:1.1rem;max-width:560px}
+.hero .ticks{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:6px}
+.hero .ticks li{font-size:.95rem;color:#E4DBCC}
+.hero .ticks li::before{content:"✓ ";color:var(--gold);font-weight:700}
+/* lead card */
+.lead-card{background:var(--white);border-radius:16px;padding:26px 24px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.lead-card h3{font-size:1.35rem;margin-bottom:4px}
+.lead-card p.sub{color:var(--ink2);font-size:.9rem;margin-bottom:16px}
+.lead-card label{display:block;font-weight:600;color:var(--ink);font-size:.82rem;margin:12px 0 5px}
+.lead-card input,.lead-card select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);font-family:var(--sans);font-size:.95rem;color:var(--ink2)}
+.lead-card .btn{width:100%;margin-top:18px}
+.lead-card .fine{font-size:.76rem;color:#7a7167;text-align:center;margin-top:10px}
+.lead-card .consent{display:flex;gap:8px;align-items:flex-start;font-size:.8rem;color:var(--ink2);margin-top:14px;line-height:1.45;font-weight:400}
+.lead-card .consent input{width:auto;flex:0 0 auto;margin-top:3px;accent-color:var(--red)}
+.lead-card .consent a{font-weight:600}
+.lead-card .consent-ts{display:block;font-size:.76rem;color:#3f7a30;font-weight:600;margin-top:6px;min-height:1em}
+
+/* trust strip */
+.trust{background:var(--red);color:#fff;padding:26px 0}
+.trust .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;text-align:center}
+.trust b{display:block;font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.trust span{font-size:.82rem;opacity:.92}
+@media(max-width:820px){.trust .grid{grid-template-columns:repeat(2,1fr);gap:22px}}
+
+section{padding:74px 0}
+.section-head{margin-bottom:38px;max-width:820px}
+.section-head p{margin-top:10px;color:var(--ink2)}
+
+/* room tiles */
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.room{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--white);min-height:230px;display:flex;flex-direction:column}
+.room .ph{flex:1;min-height:150px}
+.room .cap{padding:16px 18px}
+.room .cap h3{font-size:1.15rem}
+.room .cap span{font-size:.85rem;color:var(--red);font-weight:600}
+@media(max-width:820px){.rooms{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.rooms{grid-template-columns:1fr}}
+
+/* photo placeholder */
+.ph{background:
+   repeating-linear-gradient(45deg,var(--cream2),var(--cream2) 14px,#e4dccd 14px,#e4dccd 28px);
+   position:relative;display:flex;align-items:center;justify-content:center;color:#8a7f70;min-height:150px}
+.ph::after{content:"＋ Add inspiration image";font-size:.8rem;font-weight:600;letter-spacing:.03em;background:rgba(244,241,234,.9);padding:6px 12px;border-radius:20px;border:1px dashed #b6a98f}
+.room img.rimg{width:100%;height:210px;object-fit:cover;display:block}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.gallery img.tall{grid-row:span 2;aspect-ratio:auto;height:100%}
+
+/* process */
+.process{background:var(--ink);color:#CDC3B4}
+.process h2,.process h3{color:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:step}
+.step{position:relative;padding-top:14px}
+.step .n{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h3{font-size:1.08rem;margin-bottom:6px}
+.step p{font-size:.9rem}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery .ph{aspect-ratio:4/3;border-radius:12px}
+.gallery .ph.tall{grid-row:span 2;aspect-ratio:auto}
+@media(max-width:820px){.gallery{grid-template-columns:1fr 1fr}}
+
+/* why us */
+.why{background:var(--cream2)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.why .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px}
+.why .card h3{font-size:1.1rem;margin-bottom:8px}
+.why .card p{font-size:.94rem}
+@media(max-width:820px){.why-grid{grid-template-columns:1fr}}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;font-size:.97rem}
+.quote::before{content:"“";font-family:var(--serif);font-size:2.6rem;color:var(--gold);line-height:0;display:block;margin-bottom:8px}
+.quote footer{margin-top:14px;font-weight:700;color:var(--ink);font-size:.9rem}
+.quote footer span{display:block;font-weight:400;color:var(--red);font-size:.82rem}
+@media(max-width:820px){.quotes{grid-template-columns:1fr}}
+
+/* estimate band */
+.est-band{background:linear-gradient(135deg,var(--red),#6d1d1d);color:#fff;text-align:center;padding:64px 0}
+.est-band h2{color:#fff}
+.est-band p{max-width:640px;margin:12px auto 26px;opacity:.95}
+
+/* footer */
+footer.site{background:var(--ink);color:#B9AFA2;padding:52px 0 26px;font-size:.92rem}
+footer.site a{color:#CDC3B4}
+.frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #3A2E26;margin-top:26px;padding-top:20px;font-size:.82rem}
+
+/* floating whatsapp */
+.wa-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 8px 22px rgba(0,0,0,.28);z-index:60}
+
+/* motion */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;gap:30px;padding:48px 0 56px}}
+</style>
+</head>
+<body>
+
+<header><div class="container nav">
+  <a class="logo" href="/">Motion<span>.</span>Woods<small>Interiors</small></a>
+  <div class="right">
+    <span class="tel">📞 +91 98607 85024</span>
+    <a class="btn" href="#book">Book Free Consultation</a>
+  </div>
+</div></header>
+
+<!-- HERO + LEAD FORM -->
+<section class="hero"><div class="container"><div class="hero-inner">
+  <div>
+    <p class="est">Designed &amp; built in our own Pune factory · Installed by our own crew</p>
+    <h1>Your full home interiors, <em>done right the first time.</em></h1>
+    <p class="lead">Modular kitchens, wardrobes, doors, windows and finishes — one team from design to move-in. Backed by 35+ years of craft and a 12,000 sq ft factory at Nere, Punawale.</p>
+    <ul class="ticks">
+      <li>Own factory, own quality control</li>
+      <li>Dedicated installation crew</li>
+      <li>Transparent estimate before you commit</li>
+    </ul>
+  </div>
+  <div class="lead-card" id="book">
+    <h3>Book a free consultation</h3>
+    <p class="sub">Tell us about your home. We'll call you back within 24 hours.</p>
+    <form id="lead-form">
+      <label for="lf-name">Your name</label>
+      <input id="lf-name" name="name" type="text" placeholder="e.g. Rahul Sharma" required>
+      <label for="lf-phone">Mobile number</label>
+      <input id="lf-phone" name="phone" type="tel" placeholder="10-digit mobile" required>
+      <label for="lf-city">City / Locality</label>
+      <input id="lf-city" name="city" type="text" placeholder="e.g. Wakad, Pune">
+      <label for="lf-req">What do you need?</label>
+      <select id="lf-req" name="req">
+        <option>Full Home Interiors</option>
+        <option>Modular Kitchen</option>
+        <option>Wardrobes &amp; Furniture</option>
+        <option>Doors</option>
+        <option>Windows &amp; Glass</option>
+        <option>Paints &amp; Polish</option>
+      </select>
+      <label class="consent"><input type="checkbox" id="lf-consent" name="consent"> I agree to be contacted by Motion Woods and accept the <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+      <span id="lf-consent-ts" class="consent-ts" aria-live="polite"></span>
+      <button class="btn" type="submit">Book Free Consultation</button>
+      <p class="fine">No spam. Your details go straight to our team on WhatsApp.</p>
+    </form>
+  </div>
+</div></div></section>
+
+<!-- TRUST STRIP (honest, real numbers only) -->
+<div class="trust"><div class="container"><div class="grid">
+  <div><b data-count="35">35+</b><span>Years of founders' craft</span></div>
+  <div><b data-count="7650">7,650+</b><span>Doors in just 2 townships</span></div>
+  <div><b data-count="12000">12,000</b><span>sq ft own factory, Nere</span></div>
+  <div><b data-count="20">20+</b><span>Builder clients trust us</span></div>
+  <div><b>1</b><span>Team: design → install</span></div>
+</div></div></div>
+
+<!-- ROOM / VERTICAL TILES -->
+<section><div class="container">
+  <div class="section-head"><span class="kicker">What we design</span>
+    <h2>Room by room, or your <span class="accent">whole home</span></h2>
+    <p>Every category runs as its own Motion Woods brand with a dedicated team — so you get specialists, not generalists.</p>
+  </div>
+  <div class="rooms">
+    <div class="room reveal"><img class="rimg" src="/interiors/img/kitchen.jpg" alt="Modular kitchen design in warm wood" loading="lazy"><div class="cap"><h3>Modular Kitchens</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/wardrobe.jpg" alt="Fitted wooden wardrobe design" loading="lazy"><div class="cap"><h3>Wardrobes &amp; Furniture</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/door.jpg" alt="Solid wood main door design" loading="lazy"><div class="cap"><h3>Doors</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/window.jpg" alt="Wooden-frame window design" loading="lazy"><div class="cap"><h3>Windows &amp; Glass</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/bedroom.jpg" alt="Wood-panelled feature wall and finishes" loading="lazy"><div class="cap"><h3>Paints &amp; Polish</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/living.jpg" alt="Full home living room interior" loading="lazy"><div class="cap"><h3>Full Home Interiors</h3><span>Explore designs →</span></div></div>
+  </div>
+</div></section>
+
+<!-- COST ESTIMATOR -->
+<section style="background:var(--cream2)"><div class="container">
+  <div class="section-head"><span class="kicker">Instant estimate</span>
+    <h2>What will your interiors <span class="accent">roughly cost?</span></h2>
+    <p>Pick your home size and finish level for an indicative range. Your final, itemised estimate comes free after consultation.</p>
+  </div>
+  <style>
+    .est-tool{display:grid;grid-template-columns:1fr 1fr;gap:30px;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px}
+    .est-tool label{display:block;font-weight:600;color:var(--ink);font-size:.85rem;margin:16px 0 6px}
+    .est-tool label:first-child{margin-top:0}
+    .est-tool select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--white);font-family:var(--sans);font-size:.95rem;color:var(--ink2)}
+    .est-out{background:var(--ink);color:#EDE6DA;border-radius:12px;padding:28px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+    .est-out .lbl{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;margin-bottom:8px}
+    .est-out .num{font-family:var(--serif);color:var(--white);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
+    .est-out .note{font-size:.8rem;color:#B9AFA2;margin:14px 0 20px}
+    .est-out .btn{width:100%}
+    @media(max-width:720px){.est-tool{grid-template-columns:1fr}}
+  </style>
+  <div class="est-tool">
+    <div>
+      <label for="es-bhk">Home size</label>
+      <select id="es-bhk"><option>1 BHK</option><option selected>2 BHK</option><option>3 BHK</option><option>4 BHK / Villa</option></select>
+      <label for="es-scope">What are you doing?</label>
+      <select id="es-scope"><option>Full Home Interiors</option><option>Modular Kitchen</option><option>Wardrobes &amp; Storage</option></select>
+      <label for="es-pkg">Finish level</label>
+      <select id="es-pkg"><option>Essential</option><option selected>Premium</option><option>Luxury</option></select>
+    </div>
+    <div class="est-out">
+      <div class="lbl">Indicative range</div>
+      <div class="num" id="es-num">₹—</div>
+      <div class="note">Indicative only. Final estimate is free after a consultation and depends on materials, sizes and site conditions.</div>
+      <button class="btn btn-gold" id="es-cta" type="button">Get My Exact Estimate →</button>
+    </div>
+  </div>
+</div></section>
+
+<!-- PROCESS -->
+<section class="process"><div class="container">
+  <div class="section-head"><span class="kicker">How it works</span>
+    <h2>From first call to <span class="gold">move-in</span></h2>
+    <p>The same team designs it, our factory builds it, and our own crew installs it. No middlemen, no blame-game.</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><h3>Free consultation</h3><p>Share your space, floor plan and needs. Online or at our factory.</p></div>
+    <div class="step reveal"><div class="n">2</div><h3>Design &amp; estimate</h3><p>Get a layout, material options and a transparent estimate before you commit.</p></div>
+    <div class="step reveal"><div class="n">3</div><h3>Factory production</h3><p>Built in our 12,000 sq ft unit under controlled humidity and QC.</p></div>
+    <div class="step reveal"><div class="n">4</div><h3>On-site installation</h3><p>Our dedicated crew delivers and fits everything at your home.</p></div>
+    <div class="step reveal"><div class="n">5</div><h3>Handover &amp; support</h3><p>Final checks, walkthrough and after-service you can call on.</p></div>
+  </div>
+</div></section>
+
+<!-- GALLERY (placeholders) -->
+<section><div class="container">
+  <div class="section-head"><span class="kicker">Design inspiration</span>
+    <h2>Styles we <span class="accent">work in</span></h2>
+    <p>Representative interior styles to help you picture the possibilities — these are design-inspiration images, <strong>not photographs of completed Motion Woods projects</strong>. Ask us to see real work from our factory and sites.</p>
+  </div>
+  <div class="gallery">
+    <img class="tall reveal" src="/interiors/img/living.jpg" alt="Living room with wooden TV unit" loading="lazy">
+    <img class="reveal" src="/interiors/img/kitchen.jpg" alt="Modular kitchen" loading="lazy">
+    <img class="reveal" src="/interiors/img/door.jpg" alt="Solid wood main door" loading="lazy">
+    <img class="reveal" src="/interiors/img/window.jpg" alt="Wooden-frame window" loading="lazy">
+    <img class="tall reveal" src="/interiors/img/bedroom.jpg" alt="Master bedroom with wood-panel wall" loading="lazy">
+    <img class="reveal" src="/interiors/img/wardrobe.jpg" alt="Fitted wardrobe" loading="lazy">
+  </div>
+</div></section>
+
+<!-- WHY US -->
+<section class="why"><div class="container">
+  <div class="section-head"><span class="kicker">Why Motion Woods</span>
+    <h2>The advantage of <span class="accent">one accountable team</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="card reveal"><h3>Our own factory</h3><p>A 12,000 sq ft manufacturing unit at Nere, near Punawale — so quality doesn't depend on a random local carpenter's mood.</p></div>
+    <div class="card reveal"><h3>35+ years of craft</h3><p>Built on founder Diwakar Vishwakarma's legacy of doors and interiors for Pune's leading developers.</p></div>
+    <div class="card reveal"><h3>Design to install, in-house</h3><p>One team owns the whole journey — no coordination gaps between designer, factory and fitter.</p></div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIALS (reuse real ones) -->
+<section><div class="container">
+  <div class="section-head"><span class="kicker">What clients say</span>
+    <h2>Built on <span class="accent">trust &amp; craft</span></h2>
+  </div>
+  <div class="quotes">
+    <div class="quote reveal"><p>Consistently delivered quality, finishing and commitment. Their setup helped our projects save time and hold standards throughout.</p><footer>Project Head<span>Yashada Realty</span></footer></div>
+    <div class="quote reveal"><p>True craftsmanship and timely execution — extremely professional in managing high-rise site work. One of the best in Pune.</p><footer>Site Engineer<span>Roshan Realty</span></footer></div>
+    <div class="quote reveal"><p>Excellent coordination, finishing quality and on-time delivery. Highly recommended for reliable door and furniture work.</p><footer>Director<span>Kritija Construction</span></footer></div>
+  </div>
+</div></section>
+
+<!-- ESTIMATE CTA -->
+<div class="est-band"><div class="container">
+  <h2>Get a free estimate for your home</h2>
+  <p>Tell us your rooms and rough size — we'll get back with a transparent, itemised estimate. No obligation.</p>
+  <a class="btn btn-gold" href="#book">Get My Free Estimate</a>
+</div></div>
+
+<footer class="site"><div class="container">
+  <h4 style="font-family:var(--serif);color:#fff;font-size:1.25rem">Motion<span style="color:var(--gold)">.</span>Woods Interiors</h4>
+  <p style="margin-top:10px;max-width:560px">Full-home interiors — designed, manufactured in our own Pune factory and installed by our own crew. Factory: 12,000 sq ft, Nere, near Punawale, Pune. Office: Hadapsar, Pune 411028.</p>
+  <p style="margin-top:12px">+91 98607 85024 &nbsp;|&nbsp; <a href="mailto:admin@motionwoods.com">admin@motionwoods.com</a></p>
+  <div class="frow">
+    <span><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms of Use</a></span>
+    <span>© 2026 Motion Woods Private Limited.</span>
+    <span>Kitchens · Wardrobes · Doors · Windows · Interiors — Pune</span>
+  </div>
+</div></footer>
+
+<a class="wa-float" id="wa" href="https://wa.me/919860785024?text=Hi%20Motion%20Woods!%20I'm%20interested%20in%20home%20interiors." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* lead form -> whatsapp */
+  var f=document.getElementById('lead-form');
+  var cbox=document.getElementById('lf-consent');
+  var cout=document.getElementById('lf-consent-ts');
+  var fmtTs=function(d){return d.toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});};
+  if(cbox){cbox.addEventListener('change',function(){
+    if(cbox.checked){var d=new Date();cbox.dataset.tsLocal=fmtTs(d);cbox.dataset.tsIso=d.toISOString();if(cout)cout.textContent='✓ Consent recorded at '+cbox.dataset.tsLocal;}
+    else{cbox.dataset.tsLocal='';cbox.dataset.tsIso='';if(cout)cout.textContent='';}
+  });}
+  if(f){f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(cbox&&!cbox.checked){alert('Please accept the Privacy Policy to continue.');return;}
+    var ts=(cbox&&cbox.dataset.tsLocal)||fmtTs(new Date());
+    var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    var msg='Hi Motion Woods! I would like a free interiors consultation.%0A'+
+      'Name: '+encodeURIComponent(g('lf-name'))+'%0A'+
+      'Mobile: '+encodeURIComponent(g('lf-phone'))+'%0A'+
+      'City: '+encodeURIComponent(g('lf-city'))+'%0A'+
+      'Requirement: '+encodeURIComponent(g('lf-req'))+'%0A'+
+      'Consent: Yes — Privacy Policy accepted at '+encodeURIComponent(ts);
+    try{fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({form:'interiors',name:g('lf-name'),phone:g('lf-phone'),city:g('lf-city'),requirement:g('lf-req'),consent:true,clientTimestamp:(cbox&&cbox.dataset.tsIso)||new Date().toISOString(),privacyVersion:'2026-07-27'})}).catch(function(){});}catch(err){}
+    window.open('https://wa.me/919860785024?text='+msg,'_blank');
+  });}
+
+  /* cost estimator — INDICATIVE. Replace RATES (Rs lakh) with your real numbers. */
+  var RATES={
+    base:{'1 BHK':4,'2 BHK':7,'3 BHK':11,'4 BHK / Villa':16},
+    scope:{'Full Home Interiors':1,'Modular Kitchen':0.28,'Wardrobes & Storage':0.22},
+    pkg:{'Essential':[0.8,1.0],'Premium':[1.0,1.4],'Luxury':[1.4,2.0]}
+  };
+  var eb=document.getElementById('es-bhk'),es=document.getElementById('es-scope'),
+      ep=document.getElementById('es-pkg'),en=document.getElementById('es-num'),
+      ec=document.getElementById('es-cta');
+  function estimate(){var b=RATES.base[eb.value]*RATES.scope[es.value];var p=RATES.pkg[ep.value];return{lo:b*p[0],hi:b*p[1]};}
+  function renderEst(){var r=estimate();en.textContent='₹'+r.lo.toFixed(1)+'L – ₹'+r.hi.toFixed(1)+'L';}
+  if(eb){
+    [eb,es,ep].forEach(function(el){el.addEventListener('change',renderEst);});
+    renderEst();
+    ec.addEventListener('click',function(){
+      var r=estimate();
+      var msg='Hi Motion Woods! I used the interiors estimator.%0A'+
+        'Home: '+encodeURIComponent(eb.value)+'%0A'+
+        'Scope: '+encodeURIComponent(es.value)+'%0A'+
+        'Finish: '+encodeURIComponent(ep.value)+'%0A'+
+        'Indicative: '+encodeURIComponent('Rs '+r.lo.toFixed(1)+'L - Rs '+r.hi.toFixed(1)+'L')+'%0A'+
+        'Please share an exact estimate.';
+      window.open('https://wa.me/919860785024?text='+msg,'_blank');
+    });
+  }
+
+  if(reduced || !('IntersectionObserver' in window))return;
+
+  /* scroll reveal */
+  var els=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+
+  /* count-up on trust numbers */
+  var fmt=function(n){return n.toLocaleString('en-IN');};
+  var run=function(el){
+    var raw=el.textContent.trim();
+    var m=raw.match(/^([^\d]*)([\d,]+)(.*)$/); if(!m)return;
+    var target=parseInt(m[2].replace(/,/g,''),10); if(isNaN(target)||target<2)return;
+    var pre=m[1],suf=m[3],dur=1400,start=null;
+    var step=function(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);
+      var e=1-Math.pow(1-p,3);el.textContent=pre+fmt(Math.round(target*e))+suf;
+      if(p<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);
+  };
+  var cio=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){run(e.target);cio.unobserve(e.target);}});
+  },{threshold:0.6});
+  document.querySelectorAll('.trust b[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
+</body>
+</html>
