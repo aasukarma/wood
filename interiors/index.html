@@ -14,7 +14,7 @@
   This is a STANDALONE demo page — does not touch the builder site.
 
   WHAT IS REAL vs PLACEHOLDER
-  - REAL (safe to keep): own 12,000 sq ft factory at Nere near Punawale,
+  - REAL (safe to keep): own factory at Nere near Punawale,
     35+ yr founder craft legacy, 7,650+ doors in two townships,
     dedicated install crew, factory-controlled quality.
   - PLACEHOLDER (you must supply): every gallery image (marked
@@ -107,7 +107,7 @@ section{padding:74px 0}
 .room .ph{flex:1;min-height:150px}
 .room .cap{padding:16px 18px}
 .room .cap h3{font-size:1.15rem}
-.room .cap span{font-size:.85rem;color:var(--red);font-weight:600}
+.room .cap span,.room .cap a{font-size:.85rem;color:var(--red);font-weight:600;text-decoration:none}
 @media(max-width:820px){.rooms{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.rooms{grid-template-columns:1fr}}
 
@@ -123,6 +123,7 @@ section{padding:74px 0}
 /* process */
 .process{background:var(--ink);color:#CDC3B4}
 .process h2,.process h3{color:var(--white)}
+.process .section-head p{color:#CDC3B4}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:step}
 .step{position:relative;padding-top:14px}
 .step .n{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
@@ -189,7 +190,7 @@ footer.site a{color:#CDC3B4}
   <div>
     <p class="est">Designed &amp; built in our own Pune factory · Installed by our own crew</p>
     <h1>Your full home interiors, <em>done right the first time.</em></h1>
-    <p class="lead">Modular kitchens, wardrobes, doors, windows and finishes — one team from design to move-in. Backed by 35+ years of craft and a 12,000 sq ft factory at Nere, Punawale.</p>
+    <p class="lead">Modular kitchens, wardrobes, doors, windows and finishes — one team from design to move-in. Backed by 35+ years of craft and our own factory at Nere, Punawale.</p>
     <ul class="ticks">
       <li>Own factory, own quality control</li>
       <li>Dedicated installation crew</li>
@@ -227,7 +228,7 @@ footer.site a{color:#CDC3B4}
 <div class="trust"><div class="container"><div class="grid">
   <div><b data-count="35">35+</b><span>Years of founders' craft</span></div>
   <div><b data-count="7650">7,650+</b><span>Doors in just 2 townships</span></div>
-  <div><b data-count="12000">12,000</b><span>sq ft own factory, Nere</span></div>
+  <div><b>Own</b><span>Factory at Nere, Punawale</span></div>
   <div><b data-count="20">20+</b><span>Builder clients trust us</span></div>
   <div><b>1</b><span>Team: design → install</span></div>
 </div></div></div>
@@ -239,12 +240,12 @@ footer.site a{color:#CDC3B4}
     <p>Every category runs as its own Motion Woods brand with a dedicated team — so you get specialists, not generalists.</p>
   </div>
   <div class="rooms">
-    <div class="room reveal"><img class="rimg" src="/interiors/img/kitchen.jpg" alt="Modular kitchen design in warm wood" loading="lazy"><div class="cap"><h3>Modular Kitchens</h3><span>Explore designs →</span></div></div>
-    <div class="room reveal"><img class="rimg" src="/interiors/img/wardrobe.jpg" alt="Fitted wooden wardrobe design" loading="lazy"><div class="cap"><h3>Wardrobes &amp; Furniture</h3><span>Explore designs →</span></div></div>
-    <div class="room reveal"><img class="rimg" src="/interiors/img/door.jpg" alt="Solid wood main door design" loading="lazy"><div class="cap"><h3>Doors</h3><span>Explore designs →</span></div></div>
-    <div class="room reveal"><img class="rimg" src="/interiors/img/window.jpg" alt="Wooden-frame window design" loading="lazy"><div class="cap"><h3>Windows &amp; Glass</h3><span>Explore designs →</span></div></div>
-    <div class="room reveal"><img class="rimg" src="/interiors/img/bedroom.jpg" alt="Wood-panelled feature wall and finishes" loading="lazy"><div class="cap"><h3>Paints &amp; Polish</h3><span>Explore designs →</span></div></div>
-    <div class="room reveal"><img class="rimg" src="/interiors/img/living.jpg" alt="Full home living room interior" loading="lazy"><div class="cap"><h3>Full Home Interiors</h3><span>Explore designs →</span></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/kitchen.jpg" alt="Modular kitchen design in warm wood" loading="lazy"><div class="cap"><h3>Modular Kitchens</h3><a href="/motionwoods-kitchens">Explore designs →</a></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/wardrobe.jpg" alt="Fitted wooden wardrobe design" loading="lazy"><div class="cap"><h3>Wardrobes &amp; Furniture</h3><a href="/furniture-manufacturer-pune">Explore designs →</a></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/door.jpg" alt="Solid wood main door design" loading="lazy"><div class="cap"><h3>Doors</h3><a href="/wooden-door-manufacturer-pune">Explore designs →</a></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/window.jpg" alt="Wooden-frame window design" loading="lazy"><div class="cap"><h3>Windows &amp; Glass</h3><a href="/glass-windows-pune">Explore designs →</a></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/bedroom.jpg" alt="Wood-panelled feature wall and finishes" loading="lazy"><div class="cap"><h3>Paints &amp; Polish</h3><a href="/wood-polishing-finishing-pune">Explore designs →</a></div></div>
+    <div class="room reveal"><img class="rimg" src="/interiors/img/living.jpg" alt="Full home living room interior" loading="lazy"><div class="cap"><h3>Full Home Interiors</h3><a href="#book">Explore designs →</a></div></div>
   </div>
 </div></section>
 
@@ -293,25 +294,9 @@ footer.site a{color:#CDC3B4}
   <div class="steps">
     <div class="step reveal"><div class="n">1</div><h3>Free consultation</h3><p>Share your space, floor plan and needs. Online or at our factory.</p></div>
     <div class="step reveal"><div class="n">2</div><h3>Design &amp; estimate</h3><p>Get a layout, material options and a transparent estimate before you commit.</p></div>
-    <div class="step reveal"><div class="n">3</div><h3>Factory production</h3><p>Built in our 12,000 sq ft unit under controlled humidity and QC.</p></div>
+    <div class="step reveal"><div class="n">3</div><h3>Factory production</h3><p>Built in our own factory under controlled humidity and QC.</p></div>
     <div class="step reveal"><div class="n">4</div><h3>On-site installation</h3><p>Our dedicated crew delivers and fits everything at your home.</p></div>
     <div class="step reveal"><div class="n">5</div><h3>Handover &amp; support</h3><p>Final checks, walkthrough and after-service you can call on.</p></div>
-  </div>
-</div></section>
-
-<!-- GALLERY (placeholders) -->
-<section><div class="container">
-  <div class="section-head"><span class="kicker">Design inspiration</span>
-    <h2>Styles we <span class="accent">work in</span></h2>
-    <p>Representative interior styles to help you picture the possibilities — these are design-inspiration images, <strong>not photographs of completed Motion Woods projects</strong>. Ask us to see real work from our factory and sites.</p>
-  </div>
-  <div class="gallery">
-    <img class="tall reveal" src="/interiors/img/living.jpg" alt="Living room with wooden TV unit" loading="lazy">
-    <img class="reveal" src="/interiors/img/kitchen.jpg" alt="Modular kitchen" loading="lazy">
-    <img class="reveal" src="/interiors/img/door.jpg" alt="Solid wood main door" loading="lazy">
-    <img class="reveal" src="/interiors/img/window.jpg" alt="Wooden-frame window" loading="lazy">
-    <img class="tall reveal" src="/interiors/img/bedroom.jpg" alt="Master bedroom with wood-panel wall" loading="lazy">
-    <img class="reveal" src="/interiors/img/wardrobe.jpg" alt="Fitted wardrobe" loading="lazy">
   </div>
 </div></section>
 
@@ -321,7 +306,7 @@ footer.site a{color:#CDC3B4}
     <h2>The advantage of <span class="accent">one accountable team</span></h2>
   </div>
   <div class="why-grid">
-    <div class="card reveal"><h3>Our own factory</h3><p>A 12,000 sq ft manufacturing unit at Nere, near Punawale — so quality doesn't depend on a random local carpenter's mood.</p></div>
+    <div class="card reveal"><h3>Our own factory</h3><p>A manufacturing unit at Nere, near Punawale — so quality doesn't depend on a random local carpenter's mood.</p></div>
     <div class="card reveal"><h3>35+ years of craft</h3><p>Built on founder Diwakar Vishwakarma's legacy of doors and interiors for Pune's leading developers.</p></div>
     <div class="card reveal"><h3>Design to install, in-house</h3><p>One team owns the whole journey — no coordination gaps between designer, factory and fitter.</p></div>
   </div>
@@ -348,7 +333,7 @@ footer.site a{color:#CDC3B4}
 
 <footer class="site"><div class="container">
   <h4 style="font-family:var(--serif);color:#fff;font-size:1.25rem">Motion<span style="color:var(--gold)">.</span>Woods Interiors</h4>
-  <p style="margin-top:10px;max-width:560px">Full-home interiors — designed, manufactured in our own Pune factory and installed by our own crew. Factory: 12,000 sq ft, Nere, near Punawale, Pune. Office: Hadapsar, Pune 411028.</p>
+  <p style="margin-top:10px;max-width:560px">Full-home interiors — designed, manufactured in our own Pune factory and installed by our own crew. Factory: Nere, near Punawale, Pune. Office: Hadapsar, Pune 411028.</p>
   <p style="margin-top:12px">+91 98607 85024 &nbsp;|&nbsp; <a href="mailto:admin@motionwoods.com">admin@motionwoods.com</a></p>
   <div class="frow">
     <span><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms of Use</a></span>
