@@ -18,16 +18,28 @@ document.addEventListener('DOMContentLoaded',function(){
   document.body.appendChild(topBtn);
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  /* quote form -> whatsapp */
+  /* quote form -> whatsapp (with consent timestamp) */
   var f=document.getElementById('quote-form');
-  if(f){f.addEventListener('submit',function(e){
+  if(f){
+    var cbox=f.querySelector('#f-consent');
+    var fmtTs=function(d){return d.toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});};
+    var cout=document.getElementById('f-consent-ts');
+    if(cbox){cbox.addEventListener('change',function(){
+      if(cbox.checked){var d=new Date();cbox.dataset.tsLocal=fmtTs(d);cbox.dataset.tsIso=d.toISOString();if(cout)cout.textContent='✓ Consent recorded at '+cbox.dataset.tsLocal;}
+      else{cbox.dataset.tsLocal='';cbox.dataset.tsIso='';if(cout)cout.textContent='';}
+    });}
+    f.addEventListener('submit',function(e){
     e.preventDefault();
+    if(cbox&&!cbox.checked){alert('Please accept the Privacy Policy to continue.');return;}
+    var ts=(cbox&&cbox.dataset.tsLocal)||fmtTs(new Date());
     var g=function(n){var el=f.querySelector('[name='+n+']');return el?el.value:'';};
     var msg='Hello Motion Woods! I would like a quote.%0A'+
       'Name: '+encodeURIComponent(g('name'))+'%0A'+
       'Phone: '+encodeURIComponent(g('phone'))+'%0A'+
       'Project Type: '+encodeURIComponent(g('ptype'))+'%0A'+
-      'Details: '+encodeURIComponent(g('details'));
+      'Details: '+encodeURIComponent(g('details'))+'%0A'+
+      'Consent: Yes — Privacy Policy accepted at '+encodeURIComponent(ts);
+    try{fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({form:'contact',name:g('name'),phone:g('phone'),requirement:g('ptype'),details:g('details'),consent:true,clientTimestamp:(cbox&&cbox.dataset.tsIso)||new Date().toISOString(),privacyVersion:'2026-07-27'})}).catch(function(){});}catch(err){}
     window.open('https://wa.me/919860785024?text='+msg,'_blank');
   });}
 

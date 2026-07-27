@@ -27,9 +27,9 @@ sitemap.xml · robots.txt · llms.txt · vercel.json
 ## Before/after launch — do these
 - [x] **Email**: admin@motionwoods.com is live on all pages, schema and llms.txt (updated 2026-07-10).
 - [ ] **Images**: drop real project photos into /assets/img/ and add them to projects/home. Real site photos outperform stock for trust AND SEO. Add a logo.png (referenced by schema).
-- [ ] **Google Business Profile**: create it for the FACTORY at Jambe, near Punawale (a real premises customers/builders can visit photographs well) — biggest local-SEO lever. Category: Door manufacturer / Furniture manufacturer.
+- [ ] **Google Business Profile**: create it for the FACTORY at Nere, near Punawale (a real premises customers/builders can visit photographs well) — biggest local-SEO lever. Category: Door manufacturer / Furniture manufacturer.
 - [ ] **Google Search Console**: verify domain, submit sitemap.xml.
-- [ ] **Exact addresses**: schema uses Hadapsar 411028 (registered office) + Jambe near Punawale (factory, no street address yet). Add the factory's full plot address, pincode and lat/long when ready — needed for Google Business Profile too.
+- [ ] **Exact addresses**: schema uses Hadapsar 411028 (registered office) + Nere near Punawale (factory, no street address yet). Add the factory's full plot address, pincode and lat/long when ready — needed for Google Business Profile too.
 - [ ] **Blog cadence**: 1 post/month minimum. Next topics: teak vs engineered wood cost guide, acoustic doors for offices, school furniture buying guide.
 
 ## SEO/AEO/GEO already built in
