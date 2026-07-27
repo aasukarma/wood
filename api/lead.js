@@ -49,8 +49,11 @@ module.exports = async (req, res) => {
     userAgent: (req.headers['user-agent'] || '').toString().slice(0, 400)
   };
 
-  // Forward to your Google Sheet (append-only log) if configured.
-  const url = process.env.SHEET_WEBHOOK_URL;
+  // Forward to your Google Sheet (append-only log).
+  // Prefers the Vercel env var; falls back to the baked-in Apps Script URL so it
+  // works out of the box on deploy. To rotate it later, set SHEET_WEBHOOK_URL in Vercel.
+  const url = process.env.SHEET_WEBHOOK_URL
+    || 'https://script.google.com/macros/s/AKfycbyjQvw2bwulCfY8Heptn-7POwPaySbhRfHKym36IT1KzfHUGn1N_bKQ49RQyItkTk0vGg/exec';
   if (url) {
     try {
       await fetch(url, {
